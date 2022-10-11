@@ -1,7 +1,83 @@
-.hello {
-    color: red;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-body {
-    background-color: bisque;
+.titleheading {
+  font-size: 55px;
+  font-weight: bolder;
+  padding: 5%;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.leftbox {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 1rem;
+}
+
+.leftboxHeading {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.leftHeading,
+.rightHeading {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.refresh {
+  width: 5rem;
+}
+
+.storedList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 15%;
+  border: 1px solid black;
+}
+
+.storedList > li:nth-child(even) {
+  background: lightgrey;
+}
+
+.rightbox {
+  width: 40%;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  gap: 1rem;
+}
+
+.input {
+  height: 2rem;
+}
+
+.submitdiv {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.submit {
+  width: 5rem;
+  height: 2rem;
+  border: 2px solid black;
 }
