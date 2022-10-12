@@ -3,10 +3,22 @@
   margin: 0;
 }
 
+.topbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
 .titleheading {
   font-size: 55px;
   font-weight: bolder;
   padding: 5%;
+}
+
+.newgame {
+  height: 4rem;
+  width: 6rem;
+  margin-top: 5%;
 }
 
 .mainContainer {

@@ -1,5 +1,5 @@
-const add = (user, score) => {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fsXE2g6vIYQH9V5jn2Qo/scores/', {
+const add = (user, score, key) => {
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/' + key + '/scores/', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
