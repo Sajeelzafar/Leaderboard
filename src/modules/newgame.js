@@ -1,5 +1,5 @@
 // const newgame = () => {
-//     fetch("https://us-central1-js-capstone-backend.cloudfunctions.net/api/games", {
+//     return fetch("https://us-central1-js-capstone-backend.cloudfunctions.net/api/games", {
 //         method: 'POST',
 //         headers: {
 //             'Content-type': 'application/json; charset=UTF-8'
