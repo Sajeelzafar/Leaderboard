@@ -96,5 +96,21 @@
 .submit {
   width: 5rem;
   height: 2rem;
-  border: 2px solid black;
+}
+
+button {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(186, 184, 184);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+}
+
+button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
