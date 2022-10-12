@@ -31,10 +31,13 @@ submit.addEventListener('click', () => {
     additem(input1.value, input2.value);
   } else if (input1.value !== '') {
     error.innerHTML = 'Fill in the score';
+    setTimeout(printmsg, 3000);
   } else if (input2.value !== '') {
     error.innerHTML = 'Fill in the name';
+    setTimeout(printmsg, 3000);
   } else {
     error.innerHTML = 'Fill in the name and score';
+    setTimeout(printmsg, 3000);
   }
 });
 
