@@ -11,7 +11,12 @@ const input2 = document.querySelector('.input2');
 const refresh = document.querySelector('.refresh');
 const error = document.querySelector('.error');
 const newbutton = document.querySelector('.newgame');
-let key = 'fsXE2g6vIYQH9V5jn2Qo';
+let key;
+if (localStorage.getItem('key') === null) {
+    key = 'fsXE2g6vIYQH9V5jn2Qo';
+  } else {
+    key = JSON.parse(localStorage.getItem('key'));
+  }
 submit.addEventListener('click', () => {
   function printmsg() {
     error.innerHTML = '';
@@ -46,7 +51,7 @@ newbutton.addEventListener('click', () => {
     async function gamenew() {
         const response = await newgame();
         key = response.result.substring(14,34);
-        console.log(key);
+        localStorage.setItem('key', JSON.stringify(key));
     }
     
     gamenew();

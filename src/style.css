@@ -60,6 +60,10 @@
   border: 1px solid black;
 }
 
+.storedList > li {
+  padding: 2% 0% 0% 2%;
+}
+
 .storedList > li:nth-child(even) {
   background: lightgrey;
 }
