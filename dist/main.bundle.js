@@ -115,7 +115,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n// import _ from 'lodash';\n\n\n\n//# sourceURL=webpack://installing-webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_newgame_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/newgame.js */ \"./src/modules/newgame.js\");\n// import _ from 'lodash';\r\n\r\n\r\n\r\nasync function gamenew() {\r\n    const response = await (0,_modules_newgame_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n    console.log(\"Response is\", response);\r\n}\r\n\r\n// const submit = document.querySelector(\".submit\");\r\n\r\n// submit.addEventListener(\"click\", () => {\r\n//     async function additem() {\r\n//         const response = await addingfile();\r\n//         console.log(response);\r\n//     }\r\n// })\r\n\r\n/*\r\nasync function getitems{\r\n    getresponse from API using external module\r\n    print data\r\n}\r\n\r\nEventlistener on submit button{\r\n    async function add item{\r\n        addresponse to API using external module\r\n    }\r\n}\r\n\r\nEventlistener on refresh button{\r\n    async function getitems;\r\n}\r\n*/\n\n//# sourceURL=webpack://installing-webpack/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/newgame.js":
+/*!********************************!*\
+  !*** ./src/modules/newgame.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst newgame = () => {\r\n    fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/', {\r\n        method: 'POST',\r\n        headers: {\r\n            'Content-type': 'application/json'\r\n        },\r\n        body: JSON.stringify({\r\n            name: 'Cricket'\r\n        })\r\n    }).then(res => {\r\n        return res.json()\r\n    }).then (data => console.log(data));\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (newgame);\n\n//# sourceURL=webpack://installing-webpack/./src/modules/newgame.js?");
 
 /***/ })
 
