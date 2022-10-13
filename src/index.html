@@ -6,7 +6,10 @@
     <title>Wbpack Exercise</title>
 </head>
 <body>
-    <h1 class="titleheading">Leaderboard</h1>
+    <div class="topbar">
+        <h1 class="titleheading">Leaderboard</h1>
+        <button class="newgame" type="button">New Game</button>
+    </div>
     <div class="mainContainer">
         <div class="leftbox">
             <div class="leftboxHeading">
@@ -27,6 +30,15 @@
             </form>
             <p class="error"></p>
         </div>
+    </div>
+    <div class="popup">
+        <div class="popupfirstline">
+            <h1>Are you sure you want to start a new game</h1>
+            <span class="closebutton">&times;</span>
+        </div>    
+        <p>Your previous progress would be overwritten</p>
+        <button class="yes" type="button">YES</button>
+        <button class="no" type="button">NO</button>
     </div>
 </body>
 </html>
