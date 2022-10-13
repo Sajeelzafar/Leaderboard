@@ -26,6 +26,8 @@ if (localStorage.getItem('key') === null) {
 submit.addEventListener('click', () => {
   function printmsg() {
     error.innerHTML = '';
+    input1.value = '';
+    input2.value = '';
   }
 
   async function additem(user, score) {
@@ -49,7 +51,6 @@ submit.addEventListener('click', () => {
 
 async function loaditem() {
     const response = await load(key);
-    console.log("Key recieved is", key);
     print(response);
   }
 
@@ -73,11 +74,11 @@ yes.addEventListener('click', () => {
         const response = await newgame();
         key = response.result.substring(14,34);
         localStorage.setItem('key', JSON.stringify(key));
+        loaditem();
     }
     gamenew();
     closePopUp();
-    console.log("Key sent is", key);
-    loaditem();
+    
 })
 
 no.addEventListener('click', () => {
