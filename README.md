@@ -36,6 +36,7 @@ Clone and access the repository using the following commands on Git Bash:
    cd PATH 
    git clone _https://github.com/Sajeelzafar/Leaderboard.git_
    cd _Leaderboard_
+   _npm install_
   _npm run build_
   _npm start_ 
   ```
