@@ -16,13 +16,12 @@ const yes = document.querySelector('.yes');
 const no = document.querySelector('.no');
 const closebutton = document.querySelector('.closebutton');
 
-
 let key;
 if (localStorage.getItem('key') === null) {
-    key = 'fsXE2g6vIYQH9V5jn2Qo';
-  } else {
-    key = JSON.parse(localStorage.getItem('key'));
-  }
+  key = 'fsXE2g6vIYQH9V5jn2Qo';
+} else {
+  key = JSON.parse(localStorage.getItem('key'));
+}
 submit.addEventListener('click', () => {
   function printmsg() {
     error.innerHTML = '';
@@ -50,41 +49,40 @@ submit.addEventListener('click', () => {
 });
 
 async function loaditem() {
-    const response = await load(key);
-    print(response);
-  }
+  const response = await load(key);
+  print(response);
+}
 
 refresh.addEventListener('click', () => {
   loaditem();
 });
 
-function openPopUp(){
-    popup.classList.add("open");
+function openPopUp() {
+  popup.classList.add('open');
 }
-function closePopUp(){
-    popup.classList.remove("open");
+function closePopUp() {
+  popup.classList.remove('open');
 }
 
 newbutton.addEventListener('click', () => {
-    openPopUp();
-})
+  openPopUp();
+});
 
 yes.addEventListener('click', () => {
-    async function gamenew() {
-        const response = await newgame();
-        key = response.result.substring(14,34);
-        localStorage.setItem('key', JSON.stringify(key));
-        loaditem();
-    }
-    gamenew();
-    closePopUp();
-    
-})
+  async function gamenew() {
+    const response = await newgame();
+    key = response.result.substring(14, 34);
+    localStorage.setItem('key', JSON.stringify(key));
+    loaditem();
+  }
+  gamenew();
+  closePopUp();
+});
 
 no.addEventListener('click', () => {
-    closePopUp();
-})
+  closePopUp();
+});
 
 closebutton.addEventListener('click', () => {
-    closePopUp();
-})
+  closePopUp();
+});

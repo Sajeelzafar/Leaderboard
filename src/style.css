@@ -57,13 +57,11 @@
   flex-direction: column;
   margin-left: 15%;
   border: 1px solid black;
-  
 }
 
 .storedList > li {
   padding: 2% 0% 2% 2%;
   font-size: 20px;
-  
 }
 
 .storedList > li:nth-child(even) {
@@ -114,10 +112,10 @@ button {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
-button:hover {background-color: #3e8e41}
+button:hover { background-color: #3e8e41; }
 
 button:active {
   box-shadow: 0 5px #666;
@@ -153,12 +151,12 @@ button:active {
   cursor: pointer;
 }
 
-.popup p{
+.popup p {
   margin-top: 20px;
   font-size: 20px;
 }
 
-.popup button{
+.popup button {
   margin-top: 30px;
   padding: 10px 5px;
   margin-right: 5px;
@@ -167,7 +165,7 @@ button:active {
   width: 20%;
 }
 
-.open{
+.open {
   visibility: visible;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
