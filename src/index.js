@@ -11,6 +11,12 @@ const input2 = document.querySelector('.input2');
 const refresh = document.querySelector('.refresh');
 const error = document.querySelector('.error');
 const newbutton = document.querySelector('.newgame');
+const popup = document.querySelector('.popup');
+const yes = document.querySelector('.yes');
+const no = document.querySelector('.no');
+const closebutton = document.querySelector('.closebutton');
+
+
 let key;
 if (localStorage.getItem('key') === null) {
     key = 'fsXE2g6vIYQH9V5jn2Qo';
@@ -41,22 +47,43 @@ submit.addEventListener('click', () => {
   }
 });
 
-refresh.addEventListener('click', () => {
-  async function loaditem() {
+async function loaditem() {
     const response = await load(key);
+    console.log("Key recieved is", key);
     print(response);
   }
 
+refresh.addEventListener('click', () => {
   loaditem();
 });
 
+function openPopUp(){
+    popup.classList.add("open");
+}
+function closePopUp(){
+    popup.classList.remove("open");
+}
+
 newbutton.addEventListener('click', () => {
+    openPopUp();
+})
+
+yes.addEventListener('click', () => {
     async function gamenew() {
         const response = await newgame();
         key = response.result.substring(14,34);
         localStorage.setItem('key', JSON.stringify(key));
     }
-    
     gamenew();
+    closePopUp();
+    console.log("Key sent is", key);
+    loaditem();
 })
 
+no.addEventListener('click', () => {
+    closePopUp();
+})
+
+closebutton.addEventListener('click', () => {
+    closePopUp();
+})
